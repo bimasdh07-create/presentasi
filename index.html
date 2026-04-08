@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+   <link rel="stylesheet" href="../../style/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooper Bojonegoro | High-Performance Engineering</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+    <link rel="stylesheet" href="../style/katalog.css">
+<body>
+    <nav class="navbar-modern">
+        <div class="logo">COOPER <span>BOJONEGORO</span></div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Beranda</a>
+            <a href="../Katalog/index.html">Katalog</a>
+            <a href="../Order/index.html" class="nav-cta">Pesan Sekarang</a>
+        </div>
+    </nav>
+
+    <header id="hero-premium">
+        <div class="hero-content">
+            <span class="badge-new">PREMIUM MANUFACTURING</span>
+            <h1>The Next Generation of <br><span class="text-gradient">Agricultural Machines</span></h1>
+            <!-- ID ditambahkan agar teks bisa diubah oleh JS -->
+            <p id="hero-desc">Teknologi mesin pencacah BM Series untuk efisiensi pakan ternak berkelanjutan.</p>
+            <div class="hero-buttons">
+                <a href="../Order/index.html" class="btn-primary">Mulai Pemesanan</a>
+                <!-- ID btn-promo untuk interaksi JS -->
+                 <div class="input-group">
+            <label for="promo">Kode Promo (Opsional)</label>
+        <div style="display: flex; gap: 10px;">
+            <input type="text" id="promo" placeholder="Contoh: COOPERHEMAT">
+            <button type="button" id="btn-promo" style="padding: 10px; border-radius: 8px; cursor: pointer; background: #e2e8f0; border: none; font-weight: bold;">Cek</button>
+        </div>
+            <small id="promo-msg" style="margin-top: 5px; font-weight: 600;"></small>
+        </div>
+
+                <a href="#" class="btn-secondary" id="btn-promo">Lihat Promo Hari Ini</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-modern">
+            <div class="intro-grid">
+                <div class="intro-image-wrapper">
+                    <img src="BM Utama .png" alt="Engineering" class="img-main">
+                </div>
+                <div class="intro-text">
+                    <span class="label">ABOUT US</span>
+                    <h2 id="intro-title">Kualitas Tanpa Kompromi</h2>
+                    <p id="intro-desc">Setiap unit Cooper Bojonegoro dirakit dengan material baja pilihan terbaik.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp Floating dengan Link Diperbaiki (/62853...) -->
+    <div class="wa-wrapper" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 999;">
+        <a href="https://wa.me" class="btn-primary" target="_blank" id="wa-btn" style="text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 50px; background: #25d366; color: white;">
+            <img src="https://cdn-icons-png.flaticon.com" alt="WhatsApp" width="25">
+            Konfirmasi via WhatsApp Admin
+        </a>
+    </div>
+
+    <!-- Panggil File JS External -->
+    <script src="script.js"></script>
+    
+</body>
+</html>

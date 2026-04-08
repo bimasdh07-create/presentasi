@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="stylesheet" href="../style/order.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan | Cooper Bojonegoro</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="../public/style.css">
+    
+    <style>
+        /* Gaya tambahan agar lebih rapi */
+        body { background-color: #f8fafc; margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .order-form-section { max-width: 500px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+        .order-form-section h2 { text-align: center; color: #1e293b; font-weight: 800; margin-top: 0; }
+        .input-group { margin-bottom: 20px; display: flex; flex-direction: column; }
+        .input-group label { font-weight: 700; margin-bottom: 8px; color: #64748b; font-size: 0.9rem; }
+        .input-group input, .input-group select { padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem; transition: 0.3s; font-family: inherit; }
+        .input-group input:focus { border-color: #2563eb; outline: none; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+        .price-summary { background: #f1f5f9; padding: 20px; border-radius: 15px; margin: 20px 0; border: 1px solid #cbd5e1; }
+        .total-amount { font-size: 1.5rem; color: #2563eb; font-weight: 800; display: block; margin-top: 5px; }
+        .btn-submit-wa { width: 100%; background: #22c55e; color: white; padding: 16px; border: none; border-radius: 12px; font-weight: 800; cursor: pointer; font-size: 1rem; transition: 0.3s; box-shadow: 0 10px 15px rgba(34, 197, 94, 0.2); font-family: inherit; }
+        .btn-submit-wa:hover { background: #16a34a; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+    <nav class="navbar-modern">
+        <div class="logo">COOPER <span>BOJONEGORO</span></div>
+        <div class="nav-links">
+            <a href="../public/index.html">Beranda</a>
+            <a href="../katalog/index.html">Katalog</a>
+            <a href="index.html" class="active">Pesan Sekarang</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="order-form-section">
+            <h2>Formulir Pemesanan</h2>
+            <p style="text-align:center; color:#64748b; font-size: 0.9rem; margin-bottom: 25px;">Hitung otomatis pesanan Anda di bawah ini.</p>
+            
+            <form id="orderForm">
+                <div class="input-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="tipeMesin">Pilih Tipe Mesin</label>
+                    <select id="tipeMesin" required>
+                        <option value="" disabled selected>Pilih unit...</option>
+                        <option value="BM-1 Standard">BM-1 Standard</option>
+                        <option value="BM-2 Power">BM-2 Power</option>
+                        <option value="BM-3 Medium">BM-3 Medium</option>
+                        <option value="BM-4 Industrial">BM-4 Industrial</option>
+                        <option value="BM-5 Pro-Max">BM-5 Pro-Max</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="jumlah">Jumlah Unit</label>
+                    <input type="number" id="jumlah" value="1" min="1" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="alamat">Alamat Pengiriman</label>
+                    <input type="text" id="alamat" placeholder="Kecamatan, Bojonegoro" required>
+                </div>
+
+                <!-- Area Update Real-time oleh JS -->
+                <div class="price-summary">
+                    <h4>Ringkasan Biaya:</h4>
+                    <p id="detail-pesanan">Silakan pilih unit mesin...</p>
+                    <span class="total-amount">Rp <span id="total-harga">0</span></span>
+                </div>
+
+                <button type="submit" class="btn-submit-wa">Konfirmasi via WhatsApp</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- (1) Panggil File JS External -->
+    <script src="../public/script.js"></script>
+</body>
+</html>
