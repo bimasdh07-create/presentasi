@@ -1,0 +1,16 @@
+.btn-promo-action {
+    background-color: #ff9800; /* Warna Oranye */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid #ff9800;
+}
+
+.btn-promo-action:hover {
+    background-color: transparent;
+    color: #ff9800;
+}
