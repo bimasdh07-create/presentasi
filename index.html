@@ -37,18 +37,30 @@
 </head>
 <body>
     <nav class="navbar-modern">
-        <div class="logo">MESIN COOPER <span>BOJONEGORO</span></div>
+      <div class="logo" style="display: flex; flex-direction: column; width: fit-content; line-height: 1; align-items: flex-start; font-family: 'Plus Jakarta Sans', sans-serif;">
+    <!-- MESIN COOPER: Hitam Pekat, Font Modern -->
+    <span style="font-weight: 800; font-size: 1.3rem; color: #111; letter-spacing: 0.2px; display: block; white-space: nowrap;">
+        MESIN COOPER
+    </span>
+    
+    <!-- BOJONEGORO: Biru Cerah, Jarak huruf diatur agar panjangnya SEJAJAR -->
+    <span style="font-weight: 800; font-size: 1.3rem; color: #007bff; letter-spacing: 2.5px; display: block; white-space: nowrap; margin-top: 6px;">
+        BOJONEGORO
+    </span>
+    </div>
         <div class="nav-links">
-            <a href="index.html" class="active">Beranda</a>
+             <a href="index.html" class="active">Beranda</a>
+              <a href="about/index.html">Tentang Kami</a>
             <a href="../Katalog/index.html">Katalog</a>
             <a href="../Order/index.html" class="nav-cta">Pesan Sekarang</a>
         </div>
+
     </nav>
 
     <header id="hero-premium">
         <div class="hero-content">
             <span class="badge-new">MESIN PENCACAH RUMPUT TERBAIK</span>
-            <h1>Generasi Terbaru <br><span class="text-gradient">Mesin Peternakan</span></h1>
+            <h1>Generasi Terbaru <br><span class="text-gradient">Mesin Peternakan Bojonegoro</span></h1>
             <p id="hero-desc">Teknologi mesin pencacah BM Series untuk efisiensi pakan ternak berkelanjutan.</p>
             
             <div class="hero-buttons">
@@ -56,15 +68,15 @@
                 <a href="../Order/index.html" class="btn-primary">Mulai Pemesanan</a>
 
                 <!-- Input Kode Promo -->
-                <div class="input-group">
-                    <label for="promo" style="display:block; margin-bottom:5px;">Kode Promo (Opsional)</label>
-                    <div style="display: flex; gap: 10px;">
-                        <input type="text" id="promo" placeholder="Contoh: COOPERHEMAT" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-                        <button type="button" id="btn-promo" style="padding: 10px; border-radius: 8px; cursor: pointer; background: #e2e8f0; border: none; font-weight: bold;">Cek</button>
-                    </div>
-                    <small id="promo-msg" style="margin-top: 5px; font-weight: 600;"></small>
+                <div class="input-group" style="margin: 20px 0;">
+                 <label style="display:block; margin-bottom:5px; font-weight:bold;">Punya Kode Promo?</label>
+                <div style="display: flex; gap: 10px;">
+                 <input type="text" id="inputan-promo" placeholder="Contoh: HEMAT100" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+                 <button type="button" onclick="cekPromo Sekarang()" style="padding: 10px 20px; border-radius: 8px; background: #007bff; color: white; border: none; cursor: pointer; font-weight: bold;">Cek</button>
                 </div>
-
+                 <!-- Tempat muncul pesan hasil cek -->
+                <p id="hasil-promo" style="margin-top: 10px; font-weight: bold;"></p>
+                </div>
                 <!-- Tombol 2 (Promo) -->
                 <a href="Promo/index.html" class="btn-promo-action">Lihat Promo Hari Ini</a>
             </div>
@@ -78,7 +90,7 @@
                     <img src="/public/BM Utama .png" alt="Engineering" class="img-main">
                 </div>
                 <div class="intro-text">
-                    <span class="label">ABOUT US</span>
+                    <span class="label">Kenapa Memilih Kami</span>
                     <h2 id="intro-title">Kualitas Tanpa Kompromi</h2>
                     <p id="intro-desc">Setiap unit Cooper Bojonegoro dirakit dengan material baja pilihan terbaik.</p>
                 </div>
@@ -91,7 +103,27 @@
             Konfirmasi via WhatsApp Admin
         </a>
     </div>
-
     <script src="script.js"></script>
+    <script>
+function cekPromoSekarang() {
+    // 1. Ambil apa yang diketik orang
+    var kode = document.getElementById('inputan-promo').value.toUpperCase();
+    var tulisanHasil = document.getElementById('hasil-promo');
+
+    // 2. Cek kodenya
+    if (kode === "COOPERHEMAT") {
+        tulisanHasil.innerHTML = "✅ Mantap! Potongan Rp 100.000 untuk Anda.";
+        tulisanHasil.style.color = "green";
+    } 
+    else if (kode === "BOJONEGORO") {
+        tulisanHasil.innerHTML = "✅ Khusus Wong Jonegoro: Gratis Ongkir!";
+        tulisanHasil.style.color = "blue";
+    } 
+    else {
+        tulisanHasil.innerHTML = "❌ Kode salah atau sudah habis.";
+        tulisanHasil.style.color = "red";
+    }
+}
+</script>
 </body>
 </html>

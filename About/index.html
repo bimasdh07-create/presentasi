@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami | Mesin Cooper Bojonegoro</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <style>
+        :root { --biru-utama: #007bff; --hitam-tegas: #2c3e50; }
+        body { font-family: 'Inter', sans-serif; margin: 0; color: #444; line-height: 1.6; }
+        
+        /* Section Hero (Gambar Background) */
+        .hero-about {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../public/BM Utama .png');
+            background-size: cover; background-position: center;
+            height: 400px; display: flex; align-items: center; justify-content: center;
+            color: white; text-align: center;
+        }
+        .hero-about h1 { font-size: 3rem; margin: 0; }
+
+        /* Section Visi Misi */
+        .section-padding { padding: 80px 20px; max-width: 1100px; margin: auto; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        
+        /* Kotak Nilai (Value) - Seperti Waste4Change */
+        .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .value-card { 
+            padding: 30px; border-radius: 15px; background: #fff; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--biru-utama);
+            transition: 0.3s;
+        }
+        .value-card:hover { transform: translateY(-10px); }
+        .value-card h3 { color: var(--biru-utama); margin-top: 0; }
+
+        .btn-wa-about {
+            display: inline-block; background: #25d366; color: white; padding: 15px 35px;
+            border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero-about">
+        <div>
+            <h1>Tentang <span style="color: var(--biru-utama);">Kami</span></h1>
+            <p style="font-size: 1.2rem;">Membangun Ketahanan Pakan Ternak dari Bojonegoro</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="grid-2">
+            <div>
+                <h2 style="color: var(--hitam-tegas); font-size: 2rem;">Siapa Kami?</h2>
+                <p>Mesin Cooper Bojonegoro adalah perusahaan manufaktur alat pertanian lokal yang berdedikasi untuk menghadirkan solusi teknologi mekanisasi bagi peternak Indonesia.</p>
+                <p>Terinspirasi dari melimpahnya limbah pertanian di Bojonegoro, kami merancang mesin yang mampu mengubah sisa hasil panen menjadi pakan ternak berkualitas tinggi secara efisien.</p>
+            </div>
+            <img src="../public/BM Utama .png" style="width: 100%; border-radius: 20px; box-shadow: 20px 20px 0px #f0f0f0;">
+        </div>
+    </section>
+
+    <section style="background: #f9f9f9;">
+        <div class="section-padding">
+            <h2 style="text-align: center; margin-bottom: 50px;">Nilai Utama Kami</h2>
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>Inovasi Lokal</h3>
+                    <p>Setiap desain mesin disesuaikan dengan karakteristik rumput dan tanaman di Indonesia.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Kualitas Teruji</h3>
+                    <p>Menggunakan material baja SNI dan mesin penggerak dengan performa tinggi.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Edukasi Peternak</h3>
+                    <p>Kami memberikan layanan konsultasi pembuatan silase bagi setiap mitra pembeli kami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="text-align: center;">
+        <h2>Mari Berkolaborasi</h2>
+        <p>Siap meningkatkan efisiensi peternakan Anda?</p>
+        <a href="https://wa.me" class="btn-wa-about">Hubungi Tim Kami di WhatsApp</a>
+        <br><br>
+        <a href="../index.html" style="color: #999; text-decoration: none;">← Kembali ke Beranda</a>
+    </section>
+
+</body>
+</html>
